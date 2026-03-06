@@ -1,0 +1,49 @@
+/* Reset & Basics */
+* {margin:0; padding:0; box-sizing:border-box; font-family: Arial,sans-serif;}
+body {background:#eef2f7; color:#333; line-height:1.6;}s
+
+/* Header */
+header {
+  background: linear-gradient(135deg, #0307ff, #3c59aa);
+  color:white; text-align:center; padding:60px 20px;
+  border-bottom-left-radius:50px; border-bottom-right-radius:50px;
+}
+header h1{font-size:2.8rem; margin-bottom:10px;}
+header p{font-size:1.2rem;}
+
+/* Container */
+.container {
+  max-width:1000px; margin:40px auto; padding:0 20px;
+  display:grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap:25px;
+}
+
+/* Card Styles */
+.card {
+  padding:25px; border-radius:15px; color:white; position:relative; overflow:hidden;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card h2 {margin-bottom:15px;}
+.card p, .card ul {margin-bottom:10px;}
+.card ul {list-style: disc; padding-left: 20px;}
+
+/* Gradient backgrounds */
+.about {background: linear-gradient(135deg, #2818bb, #5957c9);}
+.skills {background: linear-gradient(135deg, #1e3385, #5151c9);}
+.hobbies {background: linear-gradient(135deg, #201ca5, #724bdb);}
+.contact {background: linear-gradient(135deg, #222099, #7961e4);}
+
+/* Hover effect */
+.card:hover {transform:translateY(-8px); box-shadow:0 15px 25px rgba(0,0,0,0.2);}
+
+/* Button */
+button {
+  background: rgba(255,255,255,0.2); color:white; border:2px solid white;
+  padding:10px 20px; border-radius:8px; cursor:pointer; font-size:1rem; transition:all 0.3s;
+}
+button:hover {background: rgba(255,255,255,0.4); transform:scale(1.05);}
+
+/* Extra Info */
+#extraInfo {display:none; margin-top:15px; padding-top:10px; border-top:1px solid rgba(255,255,255,0.3);}
+#extraInfo.show {display:block; animation: fadeIn 0.5s ease;}
+@keyframes fadeIn {from {opacity:0; transform:translateY(-5px);} to {opacity:1; transform:translateY(0);}}
